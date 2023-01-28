@@ -1,10 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component, Children } from 'react';
+import Grid from '@material-ui/core/Grid';
 
-class ButtonsLayout extends Component{
-    render(){
+
+class ButtonsLayout extends Component {
+    render() {
+        const arrayChildren = Children.toArray(this.props.children);
         return (
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: "100%"}}>
-            </div>
+            <Grid container spacing={3} justifyContent="space-evenly" alignItems='center' >
+                {
+                    Children.map(arrayChildren, (child, index) =>{
+                        return (
+                            <Grid key={index} item xs={12} sm={3}>
+                                {child}
+                            </Grid>
+                        )
+                    })
+                }
+               
+            </Grid>
         )
     }
 }

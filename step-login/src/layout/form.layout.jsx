@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
-import Box from '@material-ui/core/Box';
-
+import React, { Component, Children } from 'react';
+//
+import Grid from '@material-ui/core/Grid';
 
 class FormLayout extends Component {
     render() {
-        const { children } = this.props;
+        const arrayChildren = Children.toArray(this.props.children);
         return (
-            <Box style={{display: "flex", flexDirection: 'column',padding: "10px", alignItems: 'center', justifyContent: 'center'}}>
-                {children}
-            </Box>
+            <Grid container style={{marginTop: "5px"}} spacing={5} alignItems='center'>
+                {
+                    Children.map(arrayChildren, (child, index) => {
+                        return (
+                            <Grid key={index} item sm={12}>
+                                {child}
+                            </Grid>
+                        )
+                    })
+                }
+
+            </Grid>
         )
     }
 }

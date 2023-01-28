@@ -1,14 +1,27 @@
-import React , {Component} from "react";
+import React, { Component } from "react";
+//
+import { ThemeProvider as MuiThemeProvider, createTheme } from '@material-ui/core/styles';
+import { orange } from '@material-ui/core/colors';
+//
 import UserForm from './pages/UserForm';
-import Layout from './layout/layout';
+import Layout from './layout/main.layout';
 
-export class App extends Component{
-  render(){
+const myTheme = createTheme({
+  palette: {
+      secondary: {
+          main: orange[500]
+      }
+  }
+})
+export class App extends Component {
+  render() {
     return (
       <main>
-        <Layout>
-          <UserForm />
-        </Layout>
+        <MuiThemeProvider theme={myTheme}>
+          <Layout>
+            <UserForm />
+          </Layout>
+        </MuiThemeProvider>
       </main>
     )
   }

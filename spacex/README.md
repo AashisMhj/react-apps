@@ -12,4 +12,4 @@ Checkout [server](https://github.com/AashisMhj/node-apps/tree/main/spacex) for b
 1. react-router-dom: For routing
 
 ## ScreenShots
-![dashboard]('./ss/ss1.png')
+![dashboard](./ss/ss1.png)

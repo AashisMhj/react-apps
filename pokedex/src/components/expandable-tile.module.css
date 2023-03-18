@@ -1,0 +1,24 @@
+.box{
+    padding: 10px;
+    margin: 10px;
+}
+.title{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+.items-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hide{
+    visibility: hidden;
+    display: none;
+}
+.items{
+    padding: 10px;
+    background-color: lightgray;
+    margin: 10px;
+    border-radius: 40px;
+}

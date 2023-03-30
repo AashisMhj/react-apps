@@ -24,9 +24,29 @@ body {
   width: 550px;
 }
 
+.header{
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   letter-spacing: 1px;
   margin: 0;
+}
+
+.dot{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.dot.active{
+  background-color: #2ecc71;
+}
+.dot.inactive{
+  background-color: #af1d0c;
 }
 
 h3 {

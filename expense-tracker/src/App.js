@@ -4,7 +4,11 @@ import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
 
-const db = new Dexie();
+const db = new Dexie('Expense-App');
+
+db.version(1).stores({
+  formData: "++id,url,expense_title, expense_type, expense_amount,date"
+});
 
 const expenseType = {
   income: "income",
@@ -19,6 +23,7 @@ function App() {
   const [currentExpenseType, setCurrentExpenseType] = useState(expenseType.income);
   const [orderBy, setOrderBy] = useState('');
   const [orderDirection, setOrderDirection] = useState('');
+  const isDbOpen = db.isOpen();
 
   function submitHandler(event){
     console.log(currentExpenseType);
@@ -125,19 +130,6 @@ function App() {
 
   }
 
-
-  useEffect(()=>{
-    try {
-      if(!db.isOpen()){
-        db.version(1).stores({
-          formData: "++id,url,expense_title, expense_type, expense_amount,date"
-        });
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
   useEffect(()=>{
     getAllRecords();
   }, [])
@@ -149,7 +141,9 @@ function App() {
 
   return (
     <>
-      <h2>Expense Tracker</h2>
+      <header className='header'>
+        <h2>Expense Tracker </h2> <span className={` dot ${isDbOpen ? 'active' : 'inactive'}`}></span>  
+      </header>
       <div className='container'>
         <h4>Your Balance</h4>
         <h1>{`$${getTotalBalance()}`}</h1>

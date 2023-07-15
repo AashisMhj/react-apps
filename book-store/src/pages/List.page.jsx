@@ -8,7 +8,10 @@ export default function ListPage(){
 
     useEffect(()=>{
         fetch(`${process.env.REACT_APP_API_URL}/api/books`)
-            .then(response => response.json())
+            .then(response => {
+                console.log(response);
+                return response.json()
+            })
             .then(result => setBooks(result.data || []))
             .catch(error => console.log(error));
     }, [])

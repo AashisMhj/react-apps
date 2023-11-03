@@ -3,6 +3,7 @@ import DashboardPage from "./pages/Dashboard";
 import SortableJs from "./pages/SortableJs";
 import "./app.css";
 import NestableJs from "./pages/NestableJs";
+import DnDPage from "./pages/DnD";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -29,6 +30,7 @@ function App() {
       {currentPath === "/" && <DashboardPage navigate={navigate} />}
       {currentPath === "/sortable_js" && <SortableJs />}
       {currentPath === "/nestable" && <NestableJs />}
+      {currentPath === "/dnd" && <DnDPage />}
     </div>
   )
 }

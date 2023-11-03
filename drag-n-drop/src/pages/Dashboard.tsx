@@ -9,6 +9,10 @@ const data = [
     {
         title: "React Nestable",
         url: "/nestable"
+    },
+    {
+        title: "React DnD",
+        url: "/dnd"
     }
 ]
 interface Props{
@@ -18,7 +22,7 @@ export default function DashboardPage({navigate}:Props){
     return (
         <div className={styles.container}>
             {
-                data.map(el => <Card title={el.title} link={() => navigate(el.url)} />)
+                data.map(el => <Card key={el.url} title={el.title} link={() => navigate(el.url)} />)
             }
         </div>
     )

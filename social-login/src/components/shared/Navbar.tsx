@@ -4,11 +4,11 @@ import { Menubar } from "primereact/menubar";
 export default function Navbar() {
     const items = [
         {
-            label: 'File',
+            label: 'Pages',
             icon: 'pi pi-fw pi-file',
             items: [
                 {
-                    label: 'New',
+                    label: 'Charts',
                     icon: 'pi pi-fw pi-plus',
                     items: [
                         {

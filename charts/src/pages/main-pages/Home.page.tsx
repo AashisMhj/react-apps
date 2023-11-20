@@ -44,7 +44,7 @@ const data: Array<{ label: string, charts: ChartTypes }> = [
         label: "Google",
         charts: {
             AreaChart: { exist: true, link: "/google/area-chart" },
-            Bar: { exist: true, link: "#" },
+            Bar: { exist: true, link: "/google/line-chart" },
             Bubble: { exist: true, link: "#" },
             Candlestick: { exist: true, link: "#" },
             Column: { exist: true, link: "#" },

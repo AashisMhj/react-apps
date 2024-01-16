@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .ghost-class{
     background-color: blue;
 }
@@ -35,3 +39,6 @@
 .is-dragging .list-item .grip{
     cursor: grabbing;
 }
+
+.nestable-drag-layer>.nestable-list { margin: 10px !important; }
+

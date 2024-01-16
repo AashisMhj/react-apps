@@ -1,5 +1,5 @@
 import Card from "../components/Card"
-import styles from "./dahsboard.module.css";
+import styles from "./dashboard.module.css";
 
 const data = [
     {

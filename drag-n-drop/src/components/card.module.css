@@ -4,9 +4,47 @@
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
-    text-align: center;
 }
 
 .card:hover{
     box-shadow: 3px 2px 2px black;
+}
+
+.title{
+    font-size: 24px;
+    font: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+.title:hover{
+    color: blue;
+}
+
+.description{
+    margin-top: 10px;
+    font-size: small;
+}
+
+.npmLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.list{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.features{
+    color: #4ee44e;
+}
+
+.issues{
+    color: red;
 }

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useDrag, DndProvider, useDrop } from "react-dnd"
 import { HTML5Backend } from "react-dnd-html5-backend"
-import { moveElementInArray } from "../helper/array.helper";
+import { moveElementInArray } from "../../helper/array.helper";
 
 interface ItemType {
     text: string,

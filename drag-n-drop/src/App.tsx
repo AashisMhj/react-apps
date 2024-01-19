@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import DashboardPage from "./pages/Dashboard";
-import SortableJs from "./pages/SortableJs";
+import DashboardPage from "./pages/dashboardPage/Dashboard";
+import SortableJs from "./pages/sortableJsPage/SortableJs";
 import "./app.css";
-import NestableJs from "./pages/NestableJs";
-import DnDPage from "./pages/DnD";
+import NestableJs from "./pages/reactNestable/NestableJs";
+import DnDPage from "./pages/dndPage/DnD";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);

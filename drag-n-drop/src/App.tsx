@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import DashboardPage from "./pages/dashboardPage/Dashboard";
 import SortableJs from "./pages/sortableJsPage/SortableJs";
 import "./app.css";
-import NestableJs from "./pages/reactNestable/NestableJs";
+import NestableJs from "./pages/reactNestable/ReactNestableJs";
 import DnDPage from "./pages/dndPage/DnD";
 
 function App() {

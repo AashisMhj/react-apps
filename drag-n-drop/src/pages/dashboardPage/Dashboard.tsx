@@ -5,6 +5,7 @@ const data = [
     
     {
         title: "React Nestable",
+        package_name: 'react-nestable',
         url: "/nestable",
         description: "A Package that allows to have nestable dragable items",
         npm: "https://www.npmjs.com/package/react-nestable",
@@ -17,6 +18,7 @@ const data = [
     },
     {
         title: "React DnD",
+        package_name: 'react-dnd',
         url: "/dnd",
         description: "",
         npm: "https://www.npmjs.com/package/react-dnd",
@@ -27,6 +29,7 @@ const data = [
     },
     {
         title: "React Sortable JS",
+        package_name: 'react-sortable',
         url: "/sortable_js",
         description: "Package Built on top of sortablejs",
         npm: "https://www.npmjs.com/package/react-sortablejs",
@@ -37,6 +40,7 @@ const data = [
     },
     {
         title: "React Draggable",
+        package_name: 'react-draggable',
         url: "/draggable",
         description: "For Making Dragable Elements",
         npm: "https://www.npmjs.com/package/react-draggable",
@@ -65,6 +69,7 @@ export default function DashboardPage({ navigate }: Props) {
                         issues={el.issues} 
                         link={() => navigate(el.url)} 
                         npm={el.npm}
+                        package_name={el.package_name}
                     />)
                 }
             </div>

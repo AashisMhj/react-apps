@@ -10,6 +10,7 @@ function App() {
 
   useEffect(()=>{
     const handlePropsState = () =>{
+      console.log('changed');
       setCurrentPath(window.location.pathname);
     }
 

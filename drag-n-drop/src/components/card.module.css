@@ -33,6 +33,14 @@
     margin-top: 5px;
 }
 
+.downloadInfo{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .list{
     margin-top: 10px;
     font-size: 12px;

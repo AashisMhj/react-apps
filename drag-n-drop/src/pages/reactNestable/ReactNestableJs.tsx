@@ -5,6 +5,7 @@ import './react-nestable.css';
 import { ItemType } from "./types";
 import NestableExample from "./examples/Nested";
 import NestableCollapsableExample from "./examples/NestableCollapsable";
+import { redirect } from "../../utils/route";
 
 enum ExampleTypes {
     Nestable = "Nestable",
@@ -60,6 +61,8 @@ const NestableJs = () => {
             <div className="h-full flex">
                 <nav className="h-full w-[300px] bg-green-500">
                     <ul className="flex gap-4 flex-col p-4">
+                        
+                        <li onClick={() => redirect()} className={` p-2 font-medium rounded cursor-pointer  bg-green-700 text-white hover:text-gray-300`}>Home</li>
                         {
                             (
                                 Object.keys(ExampleTypes) as Array<keyof typeof ExampleTypes>

@@ -1,4 +1,5 @@
 import Card from "../../components/Card"
+import { useURLContext } from "../../context/URLContext";
 import styles from "./dashboard.module.css";
 
 const data = [
@@ -50,10 +51,9 @@ const data = [
         issues: []
     }
 ]
-interface Props {
-    navigate: (path: string) => void
-}
-export default function DashboardPage({ navigate }: Props) {
+
+export default function DashboardPage() {
+    const {navigate} = useURLContext();
     return (
         <div className={styles.container}>
             <div className={styles.info}>

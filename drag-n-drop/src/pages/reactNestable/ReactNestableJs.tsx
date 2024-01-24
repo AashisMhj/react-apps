@@ -5,7 +5,7 @@ import './react-nestable.css';
 import { ItemType } from "./types";
 import NestableExample from "./examples/Nested";
 import NestableCollapsableExample from "./examples/NestableCollapsable";
-import { redirect } from "../../utils/route";
+import SideBar from "../../components/SideBar";
 
 enum ExampleTypes {
     Nestable = "Nestable",
@@ -59,17 +59,14 @@ const NestableJs = () => {
     return (
         <div className="h-screen">
             <div className="h-full flex">
-                <nav className="h-full w-[300px] bg-green-500">
-                    <ul className="flex gap-4 flex-col p-4">
-                        
-                        <li onClick={() => redirect()} className={` p-2 font-medium rounded cursor-pointer  bg-green-700 text-white hover:text-gray-300`}>Home</li>
-                        {
-                            (
-                                Object.keys(ExampleTypes) as Array<keyof typeof ExampleTypes>
-                            ).map(el => <li key={el} className={` p-2 font-medium rounded cursor-pointer ${current_example === el ?  "bg-white shadow-2xl text-green-950 font-bold" : "bg-green-700 text-white hover:text-gray-300"}`} onClick={() => setCurrentExample(el)}>{el}</li>)
-                        }
-                    </ul>
-                </nav>
+                <SideBar>
+                    {
+                        (
+                            Object.keys(ExampleTypes) as Array<keyof typeof ExampleTypes>
+                        ).map(el => <li key={el} className={` p-2 font-medium rounded cursor-pointer ${current_example === el ? "bg-white shadow-2xl text-green-950 font-bold" : "bg-green-700 text-white hover:text-gray-300"}`} onClick={() => setCurrentExample(el)}>{el}</li>)
+                    }
+
+                </SideBar>
                 <div className="flex-1 flex justify-center items-center p-4">
                     {
                         Examples[current_example]

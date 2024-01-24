@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+//
+import "./app.css";
 import DashboardPage from "./pages/dashboardPage/Dashboard";
 import SortableJs from "./pages/sortableJsPage/SortableJs";
-import "./app.css";
 import NestableJs from "./pages/reactNestable/ReactNestableJs";
 import DnDPage from "./pages/dndPage/DnD";
+import ReactDraggable from "./pages/reactDraggable/ReactDraggablePage";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -32,6 +34,7 @@ function App() {
       {currentPath === "/sortable_js" && <SortableJs />}
       {currentPath === "/nestable" && <NestableJs />}
       {currentPath === "/dnd" && <DnDPage />}
+      {currentPath === "/draggable" && <ReactDraggable />}
     </div>
   )
 }

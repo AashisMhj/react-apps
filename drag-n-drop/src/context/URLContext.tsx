@@ -18,7 +18,7 @@ export const useURLContext = () => {
 }
 
 const URLProvider = ({ children }: { children: ReactNode }) => {
-    const [currentPath, setCurrentPath] = useState('/');
+    const [currentPath, setCurrentPath] = useState(window.location.pathname);
     useEffect(() => {
         const handlePropsState = () => {
             setCurrentPath(window.location.pathname);

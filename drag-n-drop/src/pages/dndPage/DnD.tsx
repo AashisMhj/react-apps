@@ -1,86 +1,50 @@
-import { useRef, useState } from "react";
-import { useDrag, DndProvider, useDrop } from "react-dnd"
-import { HTML5Backend } from "react-dnd-html5-backend"
-import { moveElementInArray } from "../../helper/array.helper";
+import { useState } from "react";
+import BasicExample from "./examples/BasicExample";
+import { ItemType } from "./types";
+import SideBar from "../../components/SideBar";
 
-interface ItemType {
-    text: string,
-    index: number
+enum DnDExampleTypes {
+    Basic = "Basic",
 }
-
-function Card({ text, index, moveItem }: { isDragging?: boolean, text: string, index:number, moveItem:(dargIndex:number, hoverIndex:number) => void }) {
-    const ref = useRef<HTMLDivElement>(null);
-    const [{ opacity }, dragRef] = useDrag(() => ({
-        type: 'card',
-        item: { text, index },
-        collect: (monitor) => ({
-            opacity: monitor.isDragging() ? 0.5 : 1
-        })
-
-    }), []);
-
-    const [, drop] = useDrop({
-        accept: 'card',
-        hover(item:ItemType) {
-            if (!ref.current) {
-                return
-            }
-            const dragIndex = item.index;
-            const hoverIndex = index;
-
-            if (dragIndex === hoverIndex){
-                return;
-            }
-        },
-        drop(item:ItemType){
-            if (!ref.current) {
-                return
-            }
-            const dragIndex = item.index;
-            const hoverIndex = index;
-
-            if (dragIndex === hoverIndex){
-                console.log(dragIndex, hoverIndex);
-                console.log('same index');
-                return;
-            }
-            moveItem(dragIndex, hoverIndex);
-        }
-    })
-
-    dragRef(drop(ref));
-
-    return (
-        <div ref={ref} className="list-item" style={{ opacity }}>
-            <span className="grip">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M40 352l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zm192 0l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zM40 320c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0zM232 192l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zM40 160c-22.1 0-40-17.9-40-40L0 72C0 49.9 17.9 32 40 32l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0zM232 32l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40z" /></svg>
-            </span>
-            {text}
-        </div>
-    )
-}
-
 
 export default function DnDPage() {
-    const [items,setItems] = useState<ItemType[]>([
+    const [current_example, setCurrentExample] = useState(DnDExampleTypes.Basic);
+
+    const data:Array<ItemType> = [
         { index: 1, text: "Item One" },
         { index: 2, text: "Item Two" },
-        { index: 3, text: "Item Threee" }
-    ]);
+        { index: 3, text: "Item Three" },
+        { index: 4, text: "Item Four" },
+        { index: 5, text: "Item Five" },
+        { index: 6, text: "Item Six" },
+        { index: 7, text: "Item Seven" },
+        { index: 8, text: "Item Eight" },
+        { index: 9, text: "Item Nine" },
+        { index: 10, text: "Item Ten" },
+        { index: 11, text: "Item Eleven" },
+    ];
 
-    function moveItem(dragIndex:number, hoverIndex:number){
-        const element_index = items.findIndex(el => el.index === dragIndex);
-        const target_index = items.findIndex(el => el.index === hoverIndex)
-        const new_items = moveElementInArray(items, element_index, target_index) as Array<ItemType>;
-        setItems([...new_items]);
+    const Examples = {
+        [DnDExampleTypes.Basic]: <BasicExample data={data} />
     }
+
+    
     return (
-        <div className="list-container">
-            <DndProvider backend={HTML5Backend}>
-                {
-                    items.map((el,) => <Card key={el.text} text={el.text} index={el.index} moveItem={moveItem} />)
-                }
-            </DndProvider>
+        <div className="h-screen">
+            <div className="h-full flex">
+                <SideBar>
+                    {
+                        (
+                            Object.keys(DnDExampleTypes) as Array<keyof typeof DnDExampleTypes>
+                        ).map(el => <li key={el} className={` p-2 font-medium rounded cursor-pointer ${current_example === el ? "bg-white shadow-2xl text-green-950 font-bold" : "bg-green-700 text-white hover:text-gray-300"}`} onClick={() => setCurrentExample(el)}>{el}</li>)
+                    }
+                </SideBar>
+                <div className="flex-1 flex justify-center items-center p-4">
+                    {
+                        Examples[current_example]
+                    }
+                </div>
+            </div>
         </div>
     )
 }

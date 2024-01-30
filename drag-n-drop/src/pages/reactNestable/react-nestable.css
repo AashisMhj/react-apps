@@ -1,0 +1,16 @@
+.grip {
+    cursor: grab;
+}
+
+.grip:active {
+    cursor: grabbing;
+}
+
+
+.is-dragging .grip {
+    cursor: grabbing;
+}
+
+.nestable-drag-layer>.nestable-list {
+    margin: 10px !important;
+}

@@ -1,37 +1,23 @@
-import { useEffect, useState } from "react"
-import DashboardPage from "./pages/Dashboard";
-import SortableJs from "./pages/SortableJs";
+//
 import "./app.css";
-import NestableJs from "./pages/NestableJs";
-import DnDPage from "./pages/DnD";
+import DashboardPage from "./pages/dashboardPage/Dashboard";
+import SortableJs from "./pages/sortableJsPage/SortableJs";
+import NestableJs from "./pages/reactNestable/ReactNestableJs";
+import DnDPage from "./pages/dndPage/DnD";
+import ReactDraggable from "./pages/reactDraggable/ReactDraggablePage";
+import { useURLContext } from "./context/URLContext";
 
 function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
-  useEffect(()=>{
-    const handlePropsState = () =>{
-      setCurrentPath(window.location.pathname);
-    }
-
-    // popstate event listener to handle back/forward navigation
-    window.addEventListener('popstate', handlePropsState);
-
-    return () =>{
-      window.removeEventListener('popstate', handlePropsState);
-    }
-  }, []);
-
-  const navigate = (path:string) => {
-    window.history.pushState({}, '', path);
-    setCurrentPath(path);
-  }
+  const {currentPath} = useURLContext()
+ 
   return (
-    <div>
-      {currentPath === "/" && <DashboardPage navigate={navigate} />}
-      {currentPath === "/sortable_js" && <SortableJs />}
-      {currentPath === "/nestable" && <NestableJs />}
-      {currentPath === "/dnd" && <DnDPage />}
-    </div>
+      <div>
+        {currentPath === "/" && <DashboardPage />}
+        {currentPath === "/sortable_js" && <SortableJs />}
+        {currentPath === "/nestable" && <NestableJs />}
+        {currentPath === "/dnd" && <DnDPage />}
+        {currentPath === "/draggable" && <ReactDraggable />}
+      </div>
   )
 }
 

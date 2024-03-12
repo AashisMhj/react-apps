@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+//
+import { quillPage, tinyMce, tipTapPage } from "../../routes/paths";
 
 type CompareValueType = {
     value: boolean | null,
@@ -20,11 +22,9 @@ type CompareType = {
 
 const dummyCompareValue = { value: null, remarks: null }
 
-
-
 const EditorData: Array<CompareType> = [
     {
-        url: "/tip-tap",
+        url: tipTapPage,
         title: "TipTap",
         description: "Customizable Editor",
         bubbleMenu: {
@@ -46,7 +46,7 @@ const EditorData: Array<CompareType> = [
         }
     },
     {
-        url: "/qill",
+        url: quillPage,
         title: "Quill",
         description: "",
         stylingMethod: "",
@@ -59,7 +59,7 @@ const EditorData: Array<CompareType> = [
         syntaxHighlight: dummyCompareValue,
     },
     {
-        url: "/tiny-mce",
+        url: tinyMce,
         title: "TinyMCE",
         description: "",
         stylingMethod: "",
@@ -75,8 +75,6 @@ const EditorData: Array<CompareType> = [
 
 // type EditorTypes = keyof typeof compareData;
 // type CompareKeys = keyof CompareType;
-
-
 
 export default function HomePage() {
     return <div className="h-screen bg-slate-300 flex justify-center p-4">

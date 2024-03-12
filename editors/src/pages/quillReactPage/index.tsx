@@ -1,5 +1,10 @@
+import { useState } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
 export default function QuillReactPage(){
-    return <div>
-        This is react quill page
+    const [value, setValue] = useState('');
+    return <div className="flex items-center">
+        <ReactQuill theme="snow" value={value} onChange={setValue} />
     </div>
 }

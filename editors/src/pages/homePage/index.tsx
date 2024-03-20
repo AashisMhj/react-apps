@@ -1,77 +1,30 @@
 import { Link } from "react-router-dom";
 //
-import { quillPage, tinyMce, tipTapPage } from "../../routes/paths";
+import paths from "../../routes/paths";
 
-type CompareValueType = {
-    value: boolean | null,
-    remarks: string | null
-}
-type CompareType = {
-    title: string,
-    url: string,
-    description: string,
-    docs: string,
-    plugin: CompareValueType,
-    bubbleMenu: CompareValueType,
-    textAlignMent: CompareValueType,
-    customization: CompareValueType,
-    preview: CompareValueType,
-    syntaxHighlight: CompareValueType,
-    stylingMethod: string
-}
+import EditorData from "../../const/comparison-data";
 
-const dummyCompareValue = { value: null, remarks: null }
+// type CompareValueType = {
+//     value: boolean | null,
+//     remarks: string | null
+// }
 
-const EditorData: Array<CompareType> = [
-    {
-        url: tipTapPage,
-        title: "TipTap",
-        description: "Customizable Editor",
-        bubbleMenu: {
-            value: true,
-            remarks: null
-        },
-        docs: "",
-        stylingMethod: "Passing Custom class names",
-        textAlignMent: { value: true, remarks: null },
-        customization: {
-            value: true,
-            remarks: null
-        },
-        preview: dummyCompareValue,
-        syntaxHighlight: dummyCompareValue,
-        plugin: {
-            value: true,
-            remarks: null
-        }
-    },
-    {
-        url: quillPage,
-        title: "Quill",
-        description: "",
-        stylingMethod: "",
-        docs: "",
-        textAlignMent: dummyCompareValue,
-        bubbleMenu: dummyCompareValue,
-        customization: dummyCompareValue,
-        plugin: dummyCompareValue,
-        preview: dummyCompareValue,
-        syntaxHighlight: dummyCompareValue,
-    },
-    {
-        url: tinyMce,
-        title: "TinyMCE",
-        description: "",
-        stylingMethod: "",
-        docs: "",
-        textAlignMent: dummyCompareValue,
-        bubbleMenu: dummyCompareValue,
-        customization: dummyCompareValue,
-        plugin: dummyCompareValue,
-        preview: dummyCompareValue,
-        syntaxHighlight: dummyCompareValue,
-    }
-]
+// type CompareType = {
+//     title: string,
+//     url: string,
+//     description: string,
+//     docs: string,
+//     plugin: CompareValueType,
+//     bubbleMenu: CompareValueType,
+//     textAlignMent: CompareValueType,
+//     customization: CompareValueType,
+//     preview: CompareValueType,
+//     syntaxHighlight: CompareValueType,
+//     stylingMethod: string
+// }
+
+// const dummyCompareValue = { value: null, remarks: null }
+
 
 // type EditorTypes = keyof typeof compareData;
 // type CompareKeys = keyof CompareType;
@@ -111,6 +64,9 @@ export default function HomePage() {
                     </tr>
                 </tbody>
             </table>
+            <div className="flex justify-center items-center">
+                <Link to={paths.comparisonPage}>See All Feature Comparison</Link>
+            </div>
         </div>
     </div>
 }

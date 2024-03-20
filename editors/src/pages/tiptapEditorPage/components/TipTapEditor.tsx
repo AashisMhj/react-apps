@@ -40,8 +40,6 @@ const extensions = [
 
 const content = data.text;
 
-
-
 const MenuBar = () => {
   const { editor } = useCurrentEditor()
 

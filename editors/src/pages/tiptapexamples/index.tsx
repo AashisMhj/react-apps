@@ -1,7 +1,67 @@
-import TipTapBulletOnly from "./components/TipTapBulletsOnly";
+import { useState } from "react";
+//
+import TipTapBulletOnly from "./examples/TipTapBulletsOnly";
+import TipTapHeadingExample from "./examples/TipTapHeadingExample";
+import EditorExampleLayout from "@/layout/EditorExampleLayout";
 
-export default function TipTapExamples(){
-    return <div className="flex justify-center">
-        <TipTapBulletOnly />
+enum ExamplesEnum {
+    listExample = "list",
+    heading = "heading",
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ExamplesEnumValues = (Object.keys(ExamplesEnum) as Array<keyof typeof ExamplesEnum>).reduce((accumulator, current) => {
+    accumulator.push(ExamplesEnum[current]);
+    return accumulator;
+}, [] as (typeof ExamplesEnum[keyof typeof ExamplesEnum][]));
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ExamplesEnumArray = (Object.keys(ExamplesEnum) as Array<keyof typeof ExamplesEnum>).reduce((accumulator, current) => {
+    console.log(ExamplesEnum[current]);
+    accumulator.push({
+        key: current,
+        value: ExamplesEnum[current]
+    })
+    return accumulator;
+}, [] as Array<{
+    key: keyof typeof ExamplesEnum,
+    value: string
+}>)
+
+function ExampleItem({ clickHandler, label, is_active }: { clickHandler: () => void, label: string, is_active: boolean }) {
+    return (
+        <li onClick={clickHandler} className={`${is_active ? "bg-blue-400 text-white": ""}`}>
+            {label}
+        </li>
+    )
+}
+
+
+export default function TipTapExamples() {
+    const [selected_example, setSelectedExample] = useState(ExamplesEnum.listExample);
+
+    const TipTapExamples = {
+        [ExamplesEnum.listExample]: <TipTapBulletOnly />,
+        [ExamplesEnum.heading]: <TipTapHeadingExample />
+    }
+
+    return <div className="">
+        <div className="h-screen w-[250px] pl-4 absolute left-0">
+            <nav>
+                <ul className="flex flex-col pt-2">
+                    <ExampleItem clickHandler={() => setSelectedExample(ExamplesEnum.listExample)} label={ExamplesEnum.listExample} is_active={selected_example === ExamplesEnum.listExample} />
+                    <ExampleItem clickHandler={() => setSelectedExample(ExamplesEnum.heading)} label={ExamplesEnum.heading} is_active={selected_example === ExamplesEnum.heading} />
+                    {
+                        // TODO loop enum
+                        // ExamplesEnumArray.map((el) => <li onClick={() => setSelectedExample(el.key)}>{el.value}</li>)
+                    }
+                </ul>
+            </nav>
+        </div>
+        <EditorExampleLayout>
+            {
+                TipTapExamples[selected_example]
+            }
+        </EditorExampleLayout>
     </div>
 }

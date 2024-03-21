@@ -1,29 +1,14 @@
-import paths from "../routes/paths"
-export default [
+import paths from "@/routes/paths";
+import { CompareType } from "@/types";
+
+const data:CompareType[] =  [
     {
         "url": paths.tipTapPage,
         "title": "TipTap",
         "description": "A Light weight and customizable editor. Uses plugin system add functionality.",
-        "bubbleMenu": {
-            "value": true,
-            "remarks": null
-        },
         "docs": "",
         "stylingMethod": "Passing Custom class names",
-        "textAlignMent": {
-            "value": true,
-            "remarks": null
-        },
-        "customization": {
-            "value": true,
-            "remarks": null
-        },
-        "preview": {},
-        "syntaxHighlight": "dummyCompareValue",
-        "plugin": {
-            "value": true,
-            "remarks": null
-        }
+        example_url: paths.tipTapExamplesPage
     },
     {
         "url": "quillPage",
@@ -31,12 +16,7 @@ export default [
         "description": "",
         "stylingMethod": "",
         "docs": "",
-        "textAlignM": {},
-        "bubbleMenu": {},
-        "customization": {},
-        "plugin": {},
-        "preview": {},
-        "syntaxHighlight": {}
+        example_url: paths.quillExamplesPage
     },
     {
         "url": "tinyMce",
@@ -44,11 +24,8 @@ export default [
         "description": "",
         "stylingMethod": "",
         "docs": "",
-        "textAlignM": {},
-        "bubbleMenu": {},
-        "customization": {},
-        "plugin": {},
-        "preview": {},
-        "syntaxHighlight": {}
+        example_url: paths.tinyMCEExamplesPage
     }
 ]
+
+export default data;

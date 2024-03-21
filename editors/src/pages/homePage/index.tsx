@@ -1,33 +1,7 @@
 import { Link } from "react-router-dom";
 //
-import paths from "../../routes/paths";
-
-import EditorData from "../../const/comparison-data";
-
-// type CompareValueType = {
-//     value: boolean | null,
-//     remarks: string | null
-// }
-
-// type CompareType = {
-//     title: string,
-//     url: string,
-//     description: string,
-//     docs: string,
-//     plugin: CompareValueType,
-//     bubbleMenu: CompareValueType,
-//     textAlignMent: CompareValueType,
-//     customization: CompareValueType,
-//     preview: CompareValueType,
-//     syntaxHighlight: CompareValueType,
-//     stylingMethod: string
-// }
-
-// const dummyCompareValue = { value: null, remarks: null }
-
-
-// type EditorTypes = keyof typeof compareData;
-// type CompareKeys = keyof CompareType;
+import paths from "@/routes/paths";
+import EditorData from "@/const/comparison-data";
 
 export default function HomePage() {
     return <div className="h-screen bg-slate-300 flex justify-center p-4">
@@ -50,7 +24,7 @@ export default function HomePage() {
                         <td className="px-4 py-2">Docs</td>
                         {
                             EditorData.map(editorValue => <td key={editorValue.title}>
-                                <Link className="text-sm underline" to={editorValue.docs}>Docs</Link>
+                                <Link className="text-sm underline" to={editorValue.docs}>Open</Link>
                             </td>)
                         }
                     </tr>
@@ -62,10 +36,20 @@ export default function HomePage() {
                             </td>)
                         }
                     </tr>
+                    <tr>
+                        <td className="px-4 py-2">Examples</td>
+                        {
+                            EditorData.map(editorValue => <td key={editorValue.title} className="text-blue-400 underline underline-offset-2 hover:text-blue-600">
+                                <Link to={editorValue.example_url}>
+                                    Examples
+                                </Link>
+                            </td>)
+                        }
+                    </tr>
                 </tbody>
             </table>
             <div className="flex justify-center items-center">
-                <Link to={paths.comparisonPage}>See All Feature Comparison</Link>
+                <Link to={paths.comparisonPage} className="text-blue-400 underline underline-offset-2 hover:text-blue-600">See All Feature Comparison</Link>
             </div>
         </div>
     </div>

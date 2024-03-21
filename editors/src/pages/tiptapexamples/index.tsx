@@ -17,7 +17,6 @@ const ExamplesEnumValues = (Object.keys(ExamplesEnum) as Array<keyof typeof Exam
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ExamplesEnumArray = (Object.keys(ExamplesEnum) as Array<keyof typeof ExamplesEnum>).reduce((accumulator, current) => {
-    console.log(ExamplesEnum[current]);
     accumulator.push({
         key: current,
         value: ExamplesEnum[current]
@@ -30,7 +29,7 @@ const ExamplesEnumArray = (Object.keys(ExamplesEnum) as Array<keyof typeof Examp
 
 function ExampleItem({ clickHandler, label, is_active }: { clickHandler: () => void, label: string, is_active: boolean }) {
     return (
-        <li onClick={clickHandler} className={`${is_active ? "bg-blue-400 text-white": ""}`}>
+        <li onClick={clickHandler} className={`pl-6 cursor-pointer ${is_active ? "bg-blue-400 text-white": "hover:text-blue-600"}`}>
             {label}
         </li>
     )
@@ -46,9 +45,9 @@ export default function TipTapExamples() {
     }
 
     return <div className="">
-        <div className="h-screen w-[250px] pl-4 absolute left-0">
+        <div className="h-screen w-[250px] absolute left-0">
             <nav>
-                <ul className="flex flex-col pt-2">
+                <ul className="flex flex-col mt-2">
                     <ExampleItem clickHandler={() => setSelectedExample(ExamplesEnum.listExample)} label={ExamplesEnum.listExample} is_active={selected_example === ExamplesEnum.listExample} />
                     <ExampleItem clickHandler={() => setSelectedExample(ExamplesEnum.heading)} label={ExamplesEnum.heading} is_active={selected_example === ExamplesEnum.heading} />
                     {

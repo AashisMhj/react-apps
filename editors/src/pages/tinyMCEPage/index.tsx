@@ -6,7 +6,6 @@ import { Button } from "../../components";
 export default function TinyMCEPage() {
     const editorRef = useRef(null);
     const log = () => {
-        console.log('logging');
         if (editorRef.current) {
             console.log(editorRef.current.getContent());
         }

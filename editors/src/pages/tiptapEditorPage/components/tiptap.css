@@ -52,3 +52,12 @@
   border-top: 2px solid rgba(13, 13, 13, 0.1);
   margin: 2rem 0;
 }
+
+/* Placeholder (at the top) */
+.tiptap .is-editor-empty:first-child::before {
+  color: 'black';
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}

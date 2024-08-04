@@ -2,11 +2,13 @@ import { useState } from "react";
 //
 import TipTapBulletOnly from "./examples/TipTapBulletsOnly";
 import TipTapHeadingExample from "./examples/TipTapHeadingExample";
+import CustomPlaceHolder from "./examples/CutomPlaceHolder"
 import EditorExampleLayout from "@/layout/EditorExampleLayout";
 
 enum ExamplesEnum {
     listExample = "list",
     heading = "heading",
+    customPlaceHolder = 'custom-placeholder'
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -41,7 +43,8 @@ export default function TipTapExamples() {
 
     const TipTapExamples = {
         [ExamplesEnum.listExample]: <TipTapBulletOnly />,
-        [ExamplesEnum.heading]: <TipTapHeadingExample />
+        [ExamplesEnum.heading]: <TipTapHeadingExample />,
+        [ExamplesEnum.customPlaceHolder]: <CustomPlaceHolder />
     }
 
     return <div className="">
@@ -50,6 +53,7 @@ export default function TipTapExamples() {
                 <ul className="flex flex-col mt-2">
                     <ExampleItem clickHandler={() => setSelectedExample(ExamplesEnum.listExample)} label={ExamplesEnum.listExample} is_active={selected_example === ExamplesEnum.listExample} />
                     <ExampleItem clickHandler={() => setSelectedExample(ExamplesEnum.heading)} label={ExamplesEnum.heading} is_active={selected_example === ExamplesEnum.heading} />
+                    <ExampleItem clickHandler={() =>setSelectedExample(ExamplesEnum.customPlaceHolder)} label={ExamplesEnum.customPlaceHolder} is_active={selected_example === ExamplesEnum.customPlaceHolder} />
                     {
                         // TODO loop enum
                         // ExamplesEnumArray.map((el) => <li onClick={() => setSelectedExample(el.key)}>{el.value}</li>)

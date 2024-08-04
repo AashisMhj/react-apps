@@ -39,7 +39,7 @@ const NestableCollapsableExample = ({ items }: Props) => {
             <div className="flex gap-2 mt-1 mb-4 items-center">
                 <button className="py-1 px-4 rounded bg-sky-600 hover:bg-sky-800 text-white" onClick={() => setCollapseAll(!collapseAll)}>{collapseAll ? "Exapnd All" : "Collapse All"}</button>
             </div>
-            <div className="overflow-y-auto h-full">
+            <div className="overflow-y-auto " style={{height: 'calc(100vh - 100px)'}}>
                 <div className="list-contianer w-full">
                     <Nestable
                         maxDepth={3}

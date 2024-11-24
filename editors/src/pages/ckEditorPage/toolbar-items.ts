@@ -1,0 +1,32 @@
+const toolbar_items =  [
+    'undo',
+    'redo',
+    '|',
+    'revisionHistory',
+    'trackChanges',
+    'comment',
+    '|',
+    'aiCommands',
+    'aiAssistant',
+    '|',
+    'heading',
+    '|',
+    'bold',
+    'italic',
+    'underline',
+    '|',
+    'link',
+    'insertImage',
+    'insertTable',
+    'highlight',
+    'blockQuote',
+    'codeBlock',
+    '|',
+    'bulletedList',
+    'numberedList',
+    'todoList',
+    'outdent',
+    'indent'
+];
+
+export default toolbar_items;

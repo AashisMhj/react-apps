@@ -25,6 +25,14 @@ const data:CompareType[] =  [
         "stylingMethod": "",
         "docs": "",
         example_url: paths.tinyMCEExamplesPage
+    },
+    {
+        "url": "ckeditor",
+        "title": "CKEditor",
+        "description": "",
+        "stylingMethod": "",
+        "docs": "https://ckeditor.com/docs/ckeditor5/latest/getting-started/index.html",
+        example_url: paths.ckEditorPage
     }
 ]
 

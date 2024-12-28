@@ -1,0 +1,20 @@
+- ~~implement language direction hook~~
+- finish all pages (in english)
+    - home page
+    - pricing page
+    - features page
+    - about page
+    - ~~404 page ~~
+- stye language dropdown
+- add language to dropdown :
+    - english
+    - spanish
+    - arabic
+    - japanese
+    - hebrew
+- translate text
+- add date formatting and price formatting example
+- write readme
+- code cleanup and refactor
+
+- use plural format

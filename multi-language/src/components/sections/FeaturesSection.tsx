@@ -20,7 +20,7 @@ const features = [
   },
 ]
 
-export default function FeaturesPage() {
+export default function FeaturesSection() {
   const {language_dir} = useLanguageDir();
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">

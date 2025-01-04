@@ -3,7 +3,7 @@ import LangLink from "../../utils/LangLink";
 import useLanguageDir from "@/hooks/useLanguageDir";
 
 export default function HeroSection() {
-    const { t } = useTranslation();
+    const { t } = useTranslation('hero_section');
     const {language_dir} = useLanguageDir();
 
     return (

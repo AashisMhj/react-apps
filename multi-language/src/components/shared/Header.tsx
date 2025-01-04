@@ -8,12 +8,12 @@ import LanguageSelect from '../languageSelect/LanguageSelect';
 
 
 export default function Header() {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const navigation = [
         { name: t('pricing'), href: '/pricing' },
         { name: t('features'), href: '/features' },
-        { name: t('company'), href: '#' },
+        { name: t('company'), href: '/about-company' },
     ]
     return (
         <header className="absolute inset-x-0 top-0 z-50 border-2 border-b-black/10 bg-white">
@@ -44,12 +44,9 @@ export default function Header() {
                             {item.name}
                         </LangLink>
                     ))}
-                    <LanguageSelect />
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                        {t('logIn')} <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    <LanguageSelect />
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -87,12 +84,8 @@ export default function Header() {
                                 ))}
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >
-                                    {t('logIn')}
-                                </a>
+                                <LanguageSelect />
+
                             </div>
                         </div>
                     </div>

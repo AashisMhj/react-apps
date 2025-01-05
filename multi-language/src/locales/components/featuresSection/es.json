@@ -1,0 +1,11 @@
+{
+    "deployFaster": "Implementa más rápido",
+    "betterWorkFlow": "Un Mejor Flujo de Trabajo",
+    "workflowDescription": "Optimiza tu trabajo, elimina las intervenciones manuales y concéntrate en lo que realmente importa.",
+    "pushToDeploy": "Presiona para implementar",
+    "pushToDeployDescription": "Implementa automáticamente en tu servidor con solo un empuje desde tu control de versiones",
+    "sslCertificate": "Certificados SSL",
+    "sslCertificateDescription": "Déjanos la responsabilidad de asegurar tu sitio web. Obtén un certificado SSL gratuito y gestionado",
+    "databaseBackUps": "Copias de seguridad de la base de datos",
+    "dataBackUpsDescription": "Proveemos copias de seguridad automáticas diarias para que no pierdas nada valioso."
+}

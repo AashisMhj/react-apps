@@ -1,0 +1,11 @@
+{
+    "deployFaster": "نشر أسرع",
+    "betterWorkFlow": "تدفق عمل أفضل",
+    "workflowDescription": "قم بتبسيط عملك، وأزل التدخلات اليدوية، وركز على ما هو مهم حقًا.",
+    "pushToDeploy": "اضغط للنشر",
+    "pushToDeployDescription": "انشر إلى خادمك تلقائيًا بمجرد الضغط باستخدام نظام التحكم في الإصدارات",
+    "sslCertificate": "شهادات SSL",
+    "sslCertificateDescription": "اترك مسؤولية تأمين موقعك الإلكتروني علينا. احصل على شهادة SSL مجانية ومدارة",
+    "databaseBackUps": "نسخ احتياطية لقاعدة البيانات",
+    "dataBackUpsDescription": "نحن نوفر نسخًا احتياطية تلقائية يومية لبياناتك حتى لا تفقد أي شيء قيم."
+}

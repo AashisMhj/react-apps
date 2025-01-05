@@ -1,0 +1,11 @@
+{
+    "deployFaster": "פרוס מהר יותר",
+    "betterWorkFlow": "תהליך עבודה טוב יותר",
+    "workflowDescription": "ייעל את העבודה שלך, הסר התערבויות ידניות והתמקד במה שבאמת חשוב.",
+    "pushToDeploy": "לחץ לפריסה",
+    "pushToDeployDescription": "פרוס לשרת שלך אוטומטית בלחיצה בלבד דרך בקרת הגרסה שלך",
+    "sslCertificate": "תעודות SSL",
+    "sslCertificateDescription": "השאר לנו את האחריות על אבטחת האתר שלך. קבל תעודת SSL חינמית ומנוהלת",
+    "databaseBackUps": "גיבויי בסיס נתונים",
+    "dataBackUpsDescription": "אנחנו מספקים גיבוי אוטומטי יומי לנתונים שלך כדי שלא תאבד דבר יקר."
+}

@@ -20,6 +20,18 @@ import pricing_section_es from '../locales/components/pricingSection/es.json';
 import pricing_section_ja from '../locales/components/pricingSection/ja.json';
 import pricing_section_ar from '../locales/components/pricingSection/ar.json';
 import pricing_section_he from '../locales/components/pricingSection/he.json';
+// features section
+import features_section_en from '../locales/components/featuresSection/en.json';
+import features_section_es from '../locales/components/featuresSection/es.json';
+import features_section_ja from '../locales/components/featuresSection/ja.json';
+import features_section_ar from '../locales/components/featuresSection/ar.json';
+import features_section_he from '../locales/components/featuresSection/he.json';
+// about header section
+import about_header_section_en from '../locales/components/aboutHeaderSection/en.json';
+import about_header_section_es from '../locales/components/aboutHeaderSection/es.json';
+import about_header_section_ja from '../locales/components/aboutHeaderSection/ja.json';
+import about_header_section_ar from '../locales/components/aboutHeaderSection/ar.json';
+import about_header_section_he from '../locales/components/aboutHeaderSection/he.json';
 
 
 i18n
@@ -30,27 +42,37 @@ i18n
             en: { 
                 common: en,
                 hero_section: hero_section_en,
-                pricing_section: pricing_section_en
+                pricing_section: pricing_section_en,
+                features_section: features_section_en,
+                about_header_section: about_header_section_en,
             },
             es: { 
                 common: es,
                 hero_section: hero_section_es,
-                pricing_section: pricing_section_es
+                pricing_section: pricing_section_es,
+                features_section: features_section_es,
+                about_header_section: about_header_section_es,
             },
             ja: {
                 common: ja,
                 hero_section: hero_section_ja,
-                pricing_section: pricing_section_ja
+                pricing_section: pricing_section_ja,
+                features_section: features_section_ja,
+                about_header_section: about_header_section_ja,
             },
             ar: {
                 common: ar,
                 hero_section: hero_section_ar,
-                pricing_section: pricing_section_ar
+                pricing_section: pricing_section_ar,
+                features_section: features_section_ar,
+                about_header_section: about_header_section_ar,
             },
             he: {
                 common: he,
                 hero_section: hero_section_he,
-                pricing_section: pricing_section_he
+                pricing_section: pricing_section_he,
+                features_section: features_section_he,
+                about_header_section: about_header_section_he,
             }
         },
         fallbackLng: 'en',

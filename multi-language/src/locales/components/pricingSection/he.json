@@ -1,0 +1,20 @@
+{
+    "pricing": "תמחור",
+    "chooseRightPlan": "בחר את התוכנית הנכונה עבורך",
+    "chooseAffordablePlan": "בחר תוכנית משתלמת עם התכונות הטובות ביותר למשוך את הקהל שלך, ליצור נאמנות לקוחות ולהגדיל מכירות.",
+    "hobby": "תחביב",
+    "hobby_description": "התוכנית המושלמת אם אתה רק מתחיל עם המוצר שלנו.",
+    "hobby_features_1": "25 מוצרים", 
+    "hobby_features_2": "עד 10,000 מנויים", 
+    "hobby_features_3": "ניתוחים מתקדמים", 
+    "hobby_features_4": "מענה תמיכה תוך 24 שעות",
+    "enterprise": "ארגון",
+    "enterprise_description": "תמיכה ותשתית ייעודית לחברה שלך.",
+    "enterprise_features_1": "מוצרים ללא הגבלה",
+    "enterprise_features_2": "מנויים ללא הגבלה",
+    "enterprise_features_3": "ניתוחים מתקדמים",
+    "enterprise_features_4": "נציג תמיכה ייעודי",
+    "enterprise_features_5": "אוטומציות שיווקיות",
+    "enterprise_features_6": "אינטגרציות מותאמות אישית",
+    "getStartedToday": "התחל היום"
+}

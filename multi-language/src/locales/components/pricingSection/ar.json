@@ -1,0 +1,21 @@
+{
+    "pricing": "التسعير",
+    "chooseRightPlan": "اختر الخطة المناسبة لك",
+    "chooseAffordablePlan": "اختر خطة ميسورة التكلفة ومليئة بأفضل الميزات لجذب جمهورك، وإنشاء ولاء العملاء، وزيادة المبيعات.",
+    "hobby": "هواية",
+    "hobby_description": "الخطة المثالية إذا كنت قد بدأت للتو باستخدام منتجنا.",
+    "hobby_features_1": "25 منتجًا", 
+    "hobby_features_2": "حتى 10,000 مشترك", 
+    "hobby_features_3": "تحليلات متقدمة", 
+    "hobby_features_4": "وقت استجابة دعم خلال 24 ساعة",
+    "enterprise": "الشركة",
+    "enterprise_description": "دعم وبنية تحتية مخصصة لشركتك.",
+    "enterprise_features_1": "منتجات غير محدودة",
+    "enterprise_features_2": "مشتركين غير محدودين",
+    "enterprise_features_3": "تحليلات متقدمة",
+    "enterprise_features_4": "ممثل دعم مخصص",
+    "enterprise_features_5": "أتمتة التسويق",
+    "enterprise_features_6": "تكاملات مخصصة",
+    "getStartedToday": "ابدأ اليوم"
+
+}

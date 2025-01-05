@@ -1,0 +1,20 @@
+{
+    "pricing": "Precios",
+    "chooseRightPlan": "Elige el plan adecuado para ti",
+    "chooseAffordablePlan": "Elige un plan asequible lleno de las mejores características para atraer a tu audiencia, crear fidelidad del cliente y aumentar las ventas.",
+    "hobby": "Afición",
+    "hobby_description": "El plan perfecto si estás empezando con nuestro producto.",
+    "hobby_features_1": "25 productos", 
+    "hobby_features_2": "Hasta 10,000 suscriptores", 
+    "hobby_features_3": "Análisis avanzados", 
+    "hobby_features_4": "Tiempo de respuesta de soporte de 24 horas",
+    "enterprise": "Empresa",
+    "enterprise_description": "Soporte e infraestructura dedicados para tu empresa.",
+    "enterprise_features_1": "Productos ilimitados",
+    "enterprise_features_2": "Suscriptores ilimitados",
+    "enterprise_features_3": "Análisis avanzados",
+    "enterprise_features_4": "Representante de soporte dedicado",
+    "enterprise_features_5": "Automatizaciones de marketing",
+    "enterprise_features_6": "Integraciones personalizadas",
+    "getStartedToday": "Comience hoy"
+}

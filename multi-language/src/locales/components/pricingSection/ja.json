@@ -1,0 +1,20 @@
+{
+    "pricing": "価格設定",
+    "chooseRightPlan": "あなたに最適なプランを選択してください",
+    "chooseAffordablePlan": "最良の機能を備えた手頃なプランを選んで、オーディエンスとの交流を深め、顧客の忠誠心を高め、売上を伸ばしましょう。",
+    "hobby": "趣味",
+    "hobby_description": "当社の製品を始めたばかりの方に最適なプランです。",
+    "hobby_features_1": "25個の製品", 
+    "hobby_features_2": "最大10,000人の登録者", 
+    "hobby_features_3": "高度な分析", 
+    "hobby_features_4": "24時間以内のサポート応答時間",
+    "enterprise": "エンタープライズ",
+    "enterprise_description": "会社のための専用サポートとインフラストラクチャ。",
+    "enterprise_features_1": "無制限の製品",
+    "enterprise_features_2": "無制限の登録者",
+    "enterprise_features_3": "高度な分析",
+    "enterprise_features_4": "専任のサポート担当者",
+    "enterprise_features_5": "マーケティングの自動化",
+    "enterprise_features_6": "カスタム統合",
+    "getStartedToday": "今すぐ始めましょう"
+}

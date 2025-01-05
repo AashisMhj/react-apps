@@ -1,7 +1,7 @@
 import useLanguageDir from "@/hooks/useLanguageDir"
 
 export default function TestimonialSection() {
-    const {language_dir} = useLanguageDir();
+    
     return (
       <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
@@ -14,7 +14,7 @@ export default function TestimonialSection() {
           />
           <figure className="mt-10">
             <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
-              <p dir={language_dir}>
+              <p >
                 “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
                 molestiae. Numquam corrupti in laborum sed rerum et corporis.”
               </p>
@@ -26,11 +26,11 @@ export default function TestimonialSection() {
                 className="mx-auto size-10 rounded-full"
               />
               <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                <div className="font-semibold text-gray-900" dir={language_dir}>Judith Black</div>
+                <div className="font-semibold text-gray-900" >Judith Black</div>
                 <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
                   <circle r={1} cx={1} cy={1} />
                 </svg>
-                <div className="text-gray-600" dir={language_dir}>CEO of Workcation</div>
+                <div className="text-gray-600" >CEO of Workcation</div>
               </div>
             </figcaption>
           </figure>

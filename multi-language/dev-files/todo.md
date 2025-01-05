@@ -12,7 +12,13 @@
     - arabic
     - japanese
     - hebrew
-- translate text
+- add translation for section
+    - AboutHeaderSection
+    - FeaturesSection
+    - HeroSection
+    - PricingSection
+    - StatsSection
+    - TestimonialSection
 - add date formatting and price formatting example
 - write readme
 - code cleanup and refactor

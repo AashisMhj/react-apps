@@ -1,0 +1,11 @@
+{
+    "deployFaster": "より速くデプロイ",
+    "betterWorkFlow": "より良いワークフロー",
+    "workflowDescription": "作業を効率化し、手動の介入を排除し、本当に重要なことに集中しましょう。",
+    "pushToDeploy": "プッシュでデプロイ",
+    "pushToDeployDescription": "バージョン管理からプッシュするだけで、自動的にサーバーにデプロイします",
+    "sslCertificate": "SSL証明書",
+    "sslCertificateDescription": "ウェブサイトのセキュリティを私たちにお任せください。無料で管理されたSSL証明書を取得できます",
+    "databaseBackUps": "データベースバックアップ",
+    "dataBackUpsDescription": "貴重なデータを失わないように、毎日自動バックアップを提供します。"
+}

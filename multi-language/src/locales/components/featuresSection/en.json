@@ -1,0 +1,11 @@
+{
+    "deployFaster": "Deploy faster",
+    "betterWorkFlow": "A Better Workflow",
+    "workflowDescription": "Streamline your work, remove the manual interventions, focus on what really matters.",
+    "pushToDeploy": "Push to deploy",
+    "pushToDeployDescription": "Deploy to your server automatically with just a push with your version control",
+    "sslCertificate": "SSl certificates",
+    "sslCertificateDescription": "Leave the responsibility of securing your website to us. Get free and managed SSL Certificate",
+    "databaseBackUps": "Database backups",
+    "dataBackUpsDescription": "We provide automatic backup daily for your data to you don't loose anything valuable."   
+}
